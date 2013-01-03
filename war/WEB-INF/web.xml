@@ -3,6 +3,24 @@
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>
+	
+	<servlet>
+		<servlet-name>urlGeneratorServlet</servlet-name>
+		<servlet-class>gaemultiupload.server.BlobstoreUrlGeneratorServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>urlGeneratorServlet</servlet-name>
+		<url-pattern>/generateblobstoreurl</url-pattern>
+	</servlet-mapping>
+  
+	<servlet>
+		<servlet-name>uploadFinishedServlet</servlet-name>
+		<servlet-class>gaemultiupload.server.BlobstoreUploadFinishedServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>uploadFinishedServlet</servlet-name>
+		<url-pattern>/uploadfinished</url-pattern>
+	</servlet-mapping>
 
   <servlet>
     <servlet-name>SystemServiceServlet</servlet-name>
